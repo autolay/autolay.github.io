@@ -25,6 +25,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
   <!-- =======================================================
   * Template Name: Lumia - v2.1.0
@@ -71,11 +73,28 @@
     <div class="container text-center text-md-left" data-aos="fade-up">
       <h1>AutoLay</h1>
       <h2>Benchmarking amodal layout estimation for autonomous driving</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
+
+
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>News</h2>
+        </div>
+
+        <ul>
+            <li>June 2020: <b>AutoLay</b>, our benchmark for amodal layout estimation was accepted for <b>IROS 2020</b></li>
+            <li>Jan 2020: Our work on Visual Servoing, <b>DFVS</b> will be presented in <b>ICRA 2020</b></li>
+            <li>Dec 2019: Our work <b>MonoLayout</b> was accepted for <b>WACV 2020</b></li>
+            <li>June 2019: Joined <b>Robotics Research Centre</b> at IIIT-Hyderabad as <b>Research Assistant</b></li>
+        </ul>
+      </div>
+    </section><!-- End Scope Section -->
+
 
     <!-- ========= Scope Section =========== -->
 
@@ -86,11 +105,13 @@
           <h2>Scope</h2>
         </div>
 
+
+
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <h4>Large-scale</h4>
-              <p>
+              <p style="text-align:justify">
                 SemanticKITTI is based on the KITTI Vision Benchmark and we provide semantic annotation for all sequences of the Odometry Benchmark. Overall, we provide an unprecedented number of scans covering the full 360 degree field-of-view of the employed automotive LiDAR. 
               </p>
             </div>
@@ -99,7 +120,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <h4>Sequential</h4>
-              <p>
+              <p style="text-align:justify">
                 We labeled each scan resulting in a sequence of labeled point clouds, which were recorded at a rate of 10 Hz. This enables the usage of temporal information for semantic scene understanding and aggregation of information over multiple scans.
               </p>
             </div>
@@ -108,7 +129,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <h4>Dynamic</h4>
-              <p>
+              <p style="text-align:justify">
                 We annotated moving and non-moving traffic participants with distinct classes, including cars, trucks, motorcycles, pedestrians, and bicyclists. This enables to reason about dynamic objects in the scene.
               </p>
             </div>
@@ -189,23 +210,14 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+          <h2>Amodal Scene Layout Estimation</h2>
         </div>
 
         <div class="row">
-          <div class="col-md-6">
-            <div class="icon-box">
-              <i class="icofont-computer"></i>
-              <h4><a href="#">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
+              <h5><p style="text-align:justify">Given an image (or a sequence of images) <span class="math inline">\(I\)</span>, usually in perspective view, we wish to learn a labeling function <span class="math inline">\(\Phi\)</span> of all points within an area <span class="math inline">\(R\)</span> (usually rectangular) around the camera. Here, <span class="math inline">\(R\)</span> refers to bird's eye view, which is the top-down orthographic view of the ground plane. The labeling function <span class="math inline">\(\Phi\)</span> must produce a label distribution (over a set of <span class="math inline">\(N\)</span> classes) for world points within the swath <span class="math inline">\(R\)</span>, regardless of whether or not they are imaged in <span class="math inline">\(I\)</span>. We divide the amodal layout estimation task into three sub-tasks.</p></h5>
           </div>
           <div class="col-md-6 mt-4 mt-lg-0">
             <div class="icon-box">
-              <i class="icofont-chart-bar-graph"></i>
-              <h4><a href="#">Dolor Sitema</a></h4>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
             </div>
           </div>
           <div class="col-md-6 mt-4">
@@ -241,378 +253,54 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit</p>
+          <h2>Paper</h2>
         </div>
 
         <div class="row">
+          <h5><p> Check out our paper for more dataset statistics, results and baselines.</p></h5> 
           <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
+            <a href="https://ras.papercept.net/proceedings/IROS20/0986.pdf">
+              <img src="assets/img/index5.jpg">
+            </a>
+          </div>
+          <h5><p>If you find this work useful, please use the following BibTeX entry for citing us!</p></h5>
+          <div class="col-lg-12">
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{maniautolay,
+            title={AutoLay: Benchmarking amodal layout estimation for autonomous driving},
+            author={Mani, Kaustubh and Shankar, N Sai and Jatavallabhula, Krishna Murthy and Krishna, K Madhava}
+          }
+          </code></pre></div></div>
+          </div>
+          <h5><p>Here's our earlier work on amodal scene layout estimation</p></h5>
+          <div class="col-lg-12">
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{mani2020monolayout,
+            title={MonoLayout: Amodal scene layout from a single image},
+            author={Mani, Kaustubh and Daga, Swapnil and Garg, Shubhika and Narasimhan, Sai Shankar and Krishna, Madhava and Jatavallabhula, Krishna Murthy},
+            booktitle={The IEEE Winter Conference on Applications of Computer Vision},
+            pages={1689--1697},
+            year={2020}
+          }
+          </code></pre></div></div>
+          </div>
+          <h5><p>Don't forget to cite KITTI Vision Benchmark</p></h5>
+          <div class="col-lg-12">
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@ARTICLE{Geiger2013IJRR,
+            author = {Andreas Geiger and Philip Lenz and Christoph Stiller and Raquel Urtasun},
+            title = {Vision meets Robotics: The KITTI Dataset},
+            journal = {International Journal of Robotics Research (IJRR)},
+            year = {2013}
+          }
+          </code></pre></div></div>
           </div>
         </div>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="link-preview venobox" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">App 1</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-2.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Web 3</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-3.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">App 2</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-4.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Card 2</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-5.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Web 2</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-6.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">App 3</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-7.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Card 1</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-8.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Card 3</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-9.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Web 1</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
-        </div>
-
-        <div class="owl-carousel testimonials-carousel">
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-            <h3>Matt Brandon</h3>
-            <h4>Freelancer</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-            <h3>John Larson</h3>
-            <h4>Entrepreneur</h4>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Team</h2>
-          <p>Sit sint consectetur velit quos quisquam cupiditate nemo qui</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/team/team-1.jpg" alt="">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <p>
-                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-              </p>
-              <div class="social">
-                <a href=""><i class="icofont-twitter"></i></a>
-                <a href=""><i class="icofont-facebook"></i></a>
-                <a href=""><i class="icofont-instagram"></i></a>
-                <a href=""><i class="icofont-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/team/team-2.jpg" alt="">
-              <h4>Sarah Jhinson</h4>
-              <span>Product Manager</span>
-              <p>
-                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-              </p>
-              <div class="social">
-                <a href=""><i class="icofont-twitter"></i></a>
-                <a href=""><i class="icofont-facebook"></i></a>
-                <a href=""><i class="icofont-instagram"></i></a>
-                <a href=""><i class="icofont-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/team/team-3.jpg" alt="">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <p>
-                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-              </p>
-              <div class="social">
-                <a href=""><i class="icofont-twitter"></i></a>
-                <a href=""><i class="icofont-facebook"></i></a>
-                <a href=""><i class="icofont-instagram"></i></a>
-                <a href=""><i class="icofont-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga</p>
-        </div>
-
-        <div class="row mt-5 justify-content-center">
-
-          <div class="col-lg-10">
-
-            <div class="info-wrap">
-              <div class="row">
-                <div class="col-lg-4 info">
-                  <i class="icofont-google-map"></i>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street<br>New York, NY 535022</p>
-                </div>
-
-                <div class="col-lg-4 info mt-4 mt-lg-0">
-                  <i class="icofont-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>info@example.com<br>contact@example.com</p>
-                </div>
-
-                <div class="col-lg-4 info mt-4 mt-lg-0">
-                  <i class="icofont-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 51<br>+1 5589 22475 14</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="row mt-5 justify-content-center">
-          <div class="col-lg-10">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
