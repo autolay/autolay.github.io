@@ -9,10 +9,7 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -51,16 +48,12 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
-          <li class="drop-down"><a href="">Dataset</a>
-            <ul>
-              <li><a href="#about">Statistics</a></li>
-              <li><a href="#team">Procedure</a></li>
-            </ul>
-          </li>
-          <li><a href="#services">Tasks</a></li>
-          <li><a href="#portfolio">Download</a></li>
-          <li><a href="#testimonials">Paper</a></li>
-          <li><a href="#contact">Team</a></li>
+          <li><a href="#News">News</a></li>
+          <li><a href="#Dataset">Dataset</a></li>
+          <li><a href="#Tasks">Tasks</a></li>
+          <li><a href="#Download">Download</a></li>
+          <li><a href="#Papers">Papers</a></li>
+          <li><a href="#Team">Team</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -79,7 +72,7 @@
   <main id="main">
 
 
-    <section id="team" class="team">
+    <section id="News" class="team">
       <div class="container">
 
         <div class="section-title">
@@ -87,7 +80,7 @@
         </div>
 
         <ul>
-            <li>Dec 2020: We release the code and dataset for our work <b>Autolay</b></li>
+            <li>Jan 2021: We release the code and dataset for our work <b>Autolay</b></li>
             <li>Aug 2020: If you are virtually attending <b>ECCV 2020</b>, check out our presentation in the <b>PAD</b> workshop</li>
             <li>June 2020: <b>AutoLay</b>, our benchmark for amodal layout estimation was accepted for <b>IROS 2020</b></li>
             <li>March 2020: Stop by our <b>MonoLayout</b> poster in <b>WACV 2020</b>
@@ -96,51 +89,9 @@
     </section><!-- End Scope Section -->
 
 
-    <!-- ========= Scope Section =========== -->
 
-    <section id="team" class="team">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Scope</h2>
-        </div>
-
-
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <h4>Large-scale</h4>
-              <p style="text-align:justify">
-                SemanticKITTI is based on the KITTI Vision Benchmark and we provide semantic annotation for all sequences of the Odometry Benchmark. Overall, we provide an unprecedented number of scans covering the full 360 degree field-of-view of the employed automotive LiDAR. 
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <h4>Sequential</h4>
-              <p style="text-align:justify">
-                We labeled each scan resulting in a sequence of labeled point clouds, which were recorded at a rate of 10 Hz. This enables the usage of temporal information for semantic scene understanding and aggregation of information over multiple scans.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <h4>Dynamic</h4>
-              <p style="text-align:justify">
-                We annotated moving and non-moving traffic participants with distinct classes, including cars, trucks, motorcycles, pedestrians, and bicyclists. This enables to reason about dynamic objects in the scene.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Scope Section -->
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= Dataset Section ======= -->
+    <section id="Dataset" class="about">
       <div class="container">
 
         <div class="section-title">
@@ -185,46 +136,72 @@
         </div>
 
 
-        <!--
-          
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class= "team">
-            <div class="container">
-              <div class="row">
-                <div class="member">
-                  <p>
-                    AutoLay is a dataset for amodal layout estimation in bird’s eye view. AutoLay encompasses driving imagery from KITTI Tracking and fine-grained attributes such as lanes, sidewalks and vehicles. The dataset comprises of over 16000 images over a distance of 12 kilometers, annotated with fine-grained amodal completions in 3D as well as in bird’s eye view. AutoLay includes44 sequences from KITTI
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
         
     </section><!-- End About Section -->
+    <br>
+    <br>
 
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <section id="Tasks" class="team">
       <div class="container">
 
         <div class="section-title">
-          <h2>Amodal Scene Layout Estimation</h2>
+          <h2>Tasks</h2>
         </div>
 
         <div class="row">
               <h5><p style="text-align:justify">Given an image (or a sequence of images) <span class="math inline">\(I\)</span>, usually in perspective view, we wish to learn a labeling function <span class="math inline">\(\Phi\)</span> of all points within an area <span class="math inline">\(R\)</span> (usually rectangular) around the camera. Here, <span class="math inline">\(R\)</span> refers to bird's eye view, which is the top-down orthographic view of the ground plane. The labeling function <span class="math inline">\(\Phi\)</span> must produce a label distribution (over a set of <span class="math inline">\(N\)</span> classes) for world points within the swath <span class="math inline">\(R\)</span>, regardless of whether or not they are imaged in <span class="math inline">\(I\)</span>. We divide the amodal layout estimation task into three sub-tasks.</p></h5>
+          
+      
+        <ul><h5>
+            <li>Road Layout</li>
+            <li>Vehicle Layout</li>
+            <li>Lanes Layout</li>
+            <ul>
+              <li>Ego-lane Layout</li>
+              <li>Other lanes Layout</li>
+            </ul>
+        </h5></ul>
+        </div>
+          <div class="row">
+          <div class="col-lg-12">
+            <img src="assets/img/diff_layouts_2.png" class="img-fluid" alt="">
           </div>
         </div>
+        </div>
+
     </section><!-- End Services Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <section id="Download" class="team">
       <div class="container">
 
         <div class="section-title">
-          <h2>Paper</h2>
+          <h2>Download</h2>
+        </div>
+
+        <div class="row">
+          <ul>
+            <li><h6><p style="text-align:justify"><a href="https://drive.google.com/file/d/1SUEbXocO7mQ_GiApXhPfgDoQGQRbm4VG/view?usp=sharing"><p><h6><b>Vehicle Layouts</b></h6></a></p></h6></li>
+            <li><h6><p style="text-align:justify"><a href="https://drive.google.com/file/d/1SUEbXocO7mQ_GiApXhPfgDoQGQRbm4VG/view?usp=sharing"><p><h6><b>Road Layouts</b></h6></a></p></h6></li>
+            <li><h6><p style="text-align:justify"><a href="https://drive.google.com/file/d/1SUEbXocO7mQ_GiApXhPfgDoQGQRbm4VG/view?usp=sharing"><p><h6><b>Lane Layouts</b></h6></a></p></h6></li>
+        </ul>
+              
+         
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Services Section ======= -->
+    <br>
+    <br>
+
+    <section id="Papers" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Papers</h2>
         </div>
 
         <div class="row">
@@ -269,6 +246,46 @@
         </div>
       </div>
     </section>
+
+    <!-- ======= Services Section ======= -->
+    <section id="Team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Team</h2>
+        </div>
+        <div class="row">
+          <a href="https://scholar.google.com/citations?user=MnPjDIgAAAAJ&hl=en"><p><h4><b>Kaustubh Mani</b></h4></a> 
+              
+        </div>
+        <div class="row">
+              <p>Graduate Student, IIIT Hyderabad</p>
+        </div>
+        
+        <div class="row">
+          <a href="https://saishankarn.github.io/"><p><h4><b>Sai Shankar</b></h4></a>
+        </div>
+        <div class="row">
+              <p>Research Assistant, IIIT Hyderabad</p>
+        </div>
+        <div class="row">
+              <a href="https://krrish94.github.io/"><p><h4><b>Krishna Murthy</b></h4></a>
+        </div>
+        <div class="row">
+              <p>PhD candidate, Mila</p>
+        </div>
+        <div class="row">
+              <a href="https://www.iiit.ac.in/people/faculty/mkrishna/"><p><h4><b>Madhava Krishna</b></h4></a>
+        </div>
+        <div class="row">
+              <p>Professor, IIIT Hyderabad</p>
+              <br>
+        </div>
+
+        </div>
+
+    </section><!-- End Services Section -->
+
 
 
   </main><!-- End #main -->
