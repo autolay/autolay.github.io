@@ -80,10 +80,10 @@
         </div>
 
         <ul>
-            <li>Jan 2021: We release the code and dataset for our work <b>Autolay</b></li>
-            <li>Aug 2020: If you are virtually attending <b>ECCV 2020</b>, check out our presentation in the <b>PAD</b> workshop</li>
-            <li>June 2020: <b>AutoLay</b>, our benchmark for amodal layout estimation was accepted for <b>IROS 2020</b></li>
-            <li>March 2020: Stop by our <b>MonoLayout</b> poster in <b>WACV 2020</b>
+            <li>Jan 2021: Code and dataset released</li>
+            <li>Aug 2020: Catch our presentation at the <a href="https://sites.google.com/view/pad2020/home?authuser=0"><b>Perception for Autonomous Driving</b></a> workshop at <b>ECCV 2020</b></li>
+            <li>June 2020: <b>AutoLay</b> accepted to <b>IROS 2020</b></li>
+            <li>March 2020: Check out <a href="https://hbutsuak95.github.io/monolayout/"><b>MonoLayout</b></a>, where this all started
         </ul>
       </div>
     </section><!-- End Scope Section -->
@@ -153,7 +153,7 @@
         </div>
 
         <div class="row">
-              <h5><p style="text-align:justify">Given an image (or a sequence of images) <span class="math inline">\(I\)</span>, usually in perspective view, we wish to learn a labeling function <span class="math inline">\(\Phi\)</span> of all points within an area <span class="math inline">\(R\)</span> (usually rectangular) around the camera. Here, <span class="math inline">\(R\)</span> refers to bird's eye view, which is the top-down orthographic view of the ground plane. The labeling function <span class="math inline">\(\Phi\)</span> must produce a label distribution (over a set of <span class="math inline">\(N\)</span> classes) for world points within the swath <span class="math inline">\(R\)</span>, regardless of whether or not they are imaged in <span class="math inline">\(I\)</span>. We divide the amodal layout estimation task into three sub-tasks.</p></h5>
+              <h5><p style="text-align:justify">Given an image, or a sequence of images, we define the task of amodal layout estimation as estimating a bird's-eye view layout of the scene. This layout is <i>amodal</i> in that we also reason about the occupancies and semantics of regions of the scene that are outside the field of view or are occluded in the image.</p></h5>
           
       
         <ul><h5>
@@ -187,10 +187,10 @@
               <img src="assets/img/hierarchy.png" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8">
-              <h5><p style="text-align:justify">The Autolay dataset contains road, vehicle and lane layouts with the hierarchy same as the kitti RAW dataset. The Autolay train dataset contains layouts for 24 sequences belonging to City, Residential and Road data categories. The test dataset contains layouts for 22 sequences.</p></h5>
-              <h5><p style="text-align:justify">The corresponding RGB image for any layout can be found in the image_02 folder of the particular sequence in the RAW dataset. The road and the vehicle layouts are available as .png files, and the lane layouts are available as .npy files containing semantic labels for each lane. More information regarding the semantic labels can be found in this readme file.</p></h5>
-              <h5><p style="text-align:justify">Download the <a href="https://drive.google.com/file/d/11DrKx4olGRhloNNwD4X5F_KsY5aZXj6e/view?usp=sharing">Autolay train dataset</a></p></h5>
-              <h5><p style="text-align:justify">Download the Autolay test dataset</p></h5>
+              <h5><p style="text-align:justify">The Autolay dataset contains road, vehicle and lane layouts with the hierarchy same as the <a href="http://www.cvlibs.net/datasets/kitti/">KITTI</a>-RAW dataset. Our <i>train</i> split contains layout data for 24 sequences belonging to the <i>City</i>, <i>Residential</i>, and <i>Road</i> categories. The <i>test</i> split contains layouts datafor 22 sequences from the same categories.</p></h5>
+              <h5><p style="text-align:justify">The corresponding RGB image for any layout can be found in the <code>image_02</code> folder of the particular sequence in the RAW dataset. The road and the vehicle layouts are available as <code>.png</code> files, and the lane layouts are available as <code>.npy</code> files containing semantic labels for each lane. More information regarding the semantic labels can be found in this readme file.</p></h5>
+              <h5><p style="text-align:justify">Download the <a href="https://drive.google.com/file/d/11DrKx4olGRhloNNwD4X5F_KsY5aZXj6e/view?usp=sharing">Autolay train split</a></p></h5>
+              <h5><p style="text-align:justify">Download the Autolay test split</p></h5>
             </div>
           </div>
 
@@ -220,35 +220,42 @@
           </div>
           <h5><p>If you find this work useful, please use the following BibTeX entry for citing us!</p></h5>
           <div class="col-lg-12">
-          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{maniautolay,
-            title={AutoLay: Benchmarking amodal layout estimation for autonomous driving},
-            author={Mani, Kaustubh and Shankar, N Sai and Jatavallabhula, Krishna Murthy and Krishna, K Madhava}
-          }
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight">
+            <code>
+              @inproceedings{mani2020autolay,
+                title={AutoLay: Benchmarking amodal layout estimation for autonomous driving},
+                author={Mani, Kaustubh and Shankar, N Sai and Jatavallabhula, {Krishna Murthy} and Krishna, {K Madhava}},
+                booktitle={IEEE International Conference on Intelligent Robotics and Systems (IROS)},
+                year={2020},
+              }
           </code></pre></div></div>
           </div>
             <a href="https://arxiv.org/pdf/2002.08394.pdf">
               <img src="assets/img/monolayout.png">
             </a>
-          <h5><p>Here's our earlier work on amodal scene layout estimation</p></h5>
+          <h5><p>You might also find <a href="https://hbutsuak95.github.io/monolayout/">MonoLayout</a>---our earlier work on amodal scene layout estimation---useful and/or interesting.</p></h5>
           <div class="col-lg-12">
-          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{mani2020monolayout,
-            title={MonoLayout: Amodal scene layout from a single image},
-            author={Mani, Kaustubh and Daga, Swapnil and Garg, Shubhika and Narasimhan, Sai Shankar and Krishna, Madhava and Jatavallabhula, Krishna Murthy},
-            booktitle={The IEEE Winter Conference on Applications of Computer Vision},
-            pages={1689--1697},
-            year={2020}
-          }
-          </code></pre></div></div>
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight">
+            <code>
+              @inproceedings{mani2020monolayout,
+                title={MonoLayout: Amodal scene layout from a single image},
+                author={Mani, Kaustubh and Daga, Swapnil and Garg, Shubhika and Narasimhan, Sai Shankar and Krishna, Madhava and Jatavallabhula, {Krishna Murthy}},
+                booktitle={The IEEE Winter Conference on Applications of Computer Vision},
+                year={2020},
+              }
+            </code></pre></div></div>
           </div>
-          <h5><p>Don't forget to cite KITTI Vision Benchmark</p></h5>
+          <h5><p>If you use our work, please also cite the <a href="http://www.cvlibs.net/datasets/kitti/">KITTI Vision Benchmark Suite</a></p></h5>
           <div class="col-lg-12">
-          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@ARTICLE{Geiger2013IJRR,
-            author = {Andreas Geiger and Philip Lenz and Christoph Stiller and Raquel Urtasun},
-            title = {Vision meets Robotics: The KITTI Dataset},
-            journal = {International Journal of Robotics Research (IJRR)},
-            year = {2013}
-          }
-          </code></pre></div></div>
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight">
+            <code>
+              @article{Geiger2013IJRR,
+                author = {Andreas Geiger and Philip Lenz and Christoph Stiller and Raquel Urtasun},
+                title = {Vision meets Robotics: The KITTI Dataset},
+                journal = {International Journal of Robotics Research (IJRR)},
+                year = {2013},
+              }
+            </code></pre></div></div>
           </div>
         </div>
       </div>
